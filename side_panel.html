@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Side Panel Timer</title>
+    <style>
+      body {
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro",
+          "メイリオ", "Meiryo", "Osaka", "ＭＳ Ｐゴシック", "MS PGothic",
+          sans-serif;
+        color: #555555;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+      }
+      #frame {
+        width: 100%;
+        height: 50%;
+      }
+      #timer {
+        text-align: center;
+        font-size: 3em;
+        margin-bottom: 10px;
+      }
+      #time_input {
+        text-align: center;
+      }
+      #buttons {
+        text-align: center;
+      }
+      button,
+      input {
+        padding: 10px;
+        font-size: 1em;
+        margin: 5px;
+      }
+      input[type="number"] {
+        width: 60px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="frame">
+      <div id="timer">00:00:00</div>
+      <div id="time_input">
+        <input type="number" id="hours" placeholder="H" min="0" max="99" />:
+        <input type="number" id="minutes" placeholder="M" min="0" max="59" />:
+        <input type="number" id="seconds" placeholder="S" min="0" max="59" />
+      </div>
+      <div id="buttons">
+        <button id="countdown">CountDown</button>
+        <button id="countup">CountUp</button>
+        <button id="stop">Stop</button>
+        <button id="reset">Reset</button>
+      </div>
+    </div>
+    <script src="timer.js"></script>
+  </body>
+</html>
